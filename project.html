@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Proje Detayı</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <nav style="padding:30px 8%;">
+        <a href="index.html">← Tüm Projeler</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="project-header">
+    <img id="projectHeroImg" alt="">
+    <div class="project-header-content" id="projectHeader"></div>
+</section>
+
+<!-- SUMMARY -->
+<section class="project-summary" id="projectSummary"></section>
+
+<!-- GALLERY -->
+<section class="project-content" id="projectContent"></section>
+
+<!-- CTA -->
+<section class="project-cta">
+    <h2>Benzer Bir Proje mi Planlıyorsunuz?</h2>
+    <p>Markanıza özel, güçlü mekansal çözümler için benimle iletişime geçin.</p>
+    <a href="index.html#contact">İletişime Geç</a>
+</section>
+
+<footer>
+    © 2026 Ege Karaman · İç Mimar
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightboxImg">
+    <span class="lightbox-prev">&#10094;</span>
+    <span class="lightbox-next">&#10095;</span>
+</div>
+
+<script src="js/data.js"></script>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const id = parseInt(params.get("id"));
+const project = projects.find(p => p.id === id);
+
+if (project) {
+
+   document.getElementById("projectHeroImg").src = project.images[0];
+
+   document.getElementById("projectHeader").innerHTML = `
+    <h2>${project.title}</h2>
+    <div class="project-meta">${project.meta}</div>
+`;
+
+    document.getElementById("projectHeader").innerHTML = `
+        <div>
+            <h2>${project.title}</h2>
+            <div class="project-meta">${project.meta}</div>
+        </div>
+    `;
+
+    document.getElementById("projectSummary").innerHTML = `
+        <div class="summary-grid">
+            <div>
+                <h3>Proje Hakkında</h3>
+                <p class="editorial-text">${project.description}</p>
+            </div>
+
+            <div class="summary-box">
+                <h4>Proje Detayları</h4>
+                <ul>
+                    <li><strong>Marka:</strong> ${project.details.brand}</li>
+                    <li><strong>Lokasyon:</strong> ${project.details.location}</li>
+                    <li><strong>Yıl:</strong> ${project.details.year}</li>
+                    <li><strong>Alan:</strong> ${project.details.area}</li>
+                    <li><strong>Rol:</strong> ${project.details.role}</li>
+                    <li><strong>Odak:</strong> ${project.details.focus}</li>
+                    <li><strong>Kategori:</strong> ${project.details.category}</li>
+                </ul>
+            </div>
+            <div class="section-divider"></div>
+        </div>
+    `;
+
+    let gallery = "";
+    project.images.forEach((img, index) => {
+        gallery += `
+            <img src="${img}" class="lightbox-img" data-index="${index}">
+        `;
+    });
+
+    document.getElementById("projectContent").innerHTML = gallery;
+}
+</script>
+
+<script>
+let currentIndex = 0;
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightboxImg");
+
+document.addEventListener("click", function (e) {
+
+    if (e.target.classList.contains("lightbox-img")) {
+        currentIndex = parseInt(e.target.dataset.index);
+        lightboxImg.src = e.target.src;
+        lightbox.style.display = "flex";
+    }
+
+    if (e.target.classList.contains("lightbox-close") || e.target === lightbox) {
+        lightbox.style.display = "none";
+    }
+
+    if (e.target.classList.contains("lightbox-next")) {
+        const imgs = document.querySelectorAll(".lightbox-img");
+        currentIndex = (currentIndex + 1) % imgs.length;
+        lightboxImg.src = imgs[currentIndex].src;
+    }
+
+    if (e.target.classList.contains("lightbox-prev")) {
+        const imgs = document.querySelectorAll(".lightbox-img");
+        currentIndex = (currentIndex - 1 + imgs.length) % imgs.length;
+        lightboxImg.src = imgs[currentIndex].src;
+    }
+});
+
+document.addEventListener("keydown", e => {
+    if (e.key === "Escape") lightbox.style.display = "none";
+});
+</script>
+
+</body>
+</html>

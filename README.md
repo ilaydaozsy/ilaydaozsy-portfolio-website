@@ -1,59 +1,52 @@
-# 🎨 İlayda Özsoy — Portfolio Website
+# İlayda Özsoy — Portfolio Website
 
-A personal portfolio website designed and developed to showcase web development, software development, UI design, and digital design projects.
+Creative Developer & Digital Designer portfolio website.
 
----
+## About
 
-## ✨ Overview
+A personal portfolio website designed and developed by İlayda Özsoy to showcase software development, web development and digital design projects.
 
-This project is an early portfolio website concept created as a personal design and development project.
-
-The website focuses on presenting projects through a visual, clean, and project-oriented interface while combining web development and digital design.
-
-The project was fully designed and developed by **İlayda Özsoy**.
-
----
-
-## 🚀 Features
-
-- 🎨 Personal portfolio homepage
-- 💻 Software development project showcase
-- 🌐 Web development project presentation
-- 🖥️ Digital design project showcase
-- 📁 Project categories
-- 🔎 Individual project detail pages
-- 🖼️ Image-based project presentations
-- 📱 Responsive web design
-- ✨ Custom visual design
-- ⚡ JavaScript interactions
-- 📄 Structured project data
-
----
-
-## 🛠️ Technologies
-
-### Frontend
+## Technologies
 
 - HTML5
 - CSS3
 - JavaScript
-
-### Design & Development
-
 - Responsive Web Design
-- Custom UI Design
-- Visual Design
-- Project-based Content Presentation
+- Git & GitHub
 
----
+## Features
 
-## 📸 Preview
+- Responsive portfolio website
+- Project showcase
+- Project detail pages
+- Services section
+- Skills and tools section
+- Contact section
+- CV section
+- Interactive navigation
+- Custom visual design
 
-![Portfolio Website Preview](images/header.jpeg)
+## Screenshots
 
----
+### Homepage
+![Homepage](screenshots/homepage.PNG)
 
-## 📂 Project Structure
+### Services
+![Services](screenshots/services.PNG)
+
+### Projects
+![Projects](screenshots/projects.PNG)
+
+### Project Detail
+![Project Detail](screenshots/project-detail.PNG)
+
+### Skills
+![Skills](screenshots/skills.PNG)
+
+### Contact
+![Contact](screenshots/contact.PNG)
+
+## Project Structure
 
 ```text
 ilaydaozsy-portfolio-website
@@ -65,15 +58,31 @@ ilaydaozsy-portfolio-website
 │   └── style.css
 │
 ├── images/
-│   ├── header.jpeg
-│   ├── p1-1.jpeg
-│   ├── p2-1.jpeg
-│   ├── p2-2.jpeg
-│   ├── ...
-│   └── p9-1.jpeg
 │
 ├── js/
 │   └── data.js
 │
+├── screenshots/
+│
 ├── index.html
-└── project.html
+├── project.html
+├── .gitignore
+└── README.md
+Developer
+
+İlayda Özsoy
+
+Computer Programming Graduate
+Junior Software Developer | Digital Designer
+
+License
+
+This project was created for portfolio and professional presentation purposes.
+
+
+### Git Bash'te
+
+Önce:
+
+```bash
+notepad README.md

@@ -29,21 +29,27 @@ A personal portfolio website designed and developed by İlayda Özsoy to showcas
 ## Screenshots
 
 ### Homepage
+
 ![Homepage](screenshots/homepage.PNG)
 
 ### Services
+
 ![Services](screenshots/services.PNG)
 
 ### Projects
+
 ![Projects](screenshots/projects.PNG)
 
 ### Project Detail
+
 ![Project Detail](screenshots/project-detail.PNG)
 
 ### Skills
+
 ![Skills](screenshots/skills.PNG)
 
 ### Contact
+
 ![Contact](screenshots/contact.PNG)
 
 ## Project Structure
@@ -68,6 +74,7 @@ ilaydaozsy-portfolio-website
 ├── project.html
 ├── .gitignore
 └── README.md
+
 Developer
 
 İlayda Özsoy
@@ -78,4 +85,3 @@ Junior Software Developer | Digital Designer
 License
 
 This project was created for portfolio and professional presentation purposes.
-

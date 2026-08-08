@@ -79,10 +79,3 @@ License
 
 This project was created for portfolio and professional presentation purposes.
 
-
-### Git Bash'te
-
-Önce:
-
-```bash
-notepad README.md
